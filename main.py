@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from fastapi import FastAPI, Path, HTTPException, Query
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field, computed_field
@@ -233,3 +234,12 @@ def delete_patient(patient_id:str):
     del data[patient_id]
     save_data(data)
     return JSONResponse(status_code=200,content={'message':'patient deleted'})
+=======
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Hello FastAPI"}
+>>>>>>> e8f8354e84163c9452490d030bccddcf1310fe49
